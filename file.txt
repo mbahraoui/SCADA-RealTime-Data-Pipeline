@@ -1,0 +1,1 @@
+sh /opt/pycharm/bin/pycharm.sh
