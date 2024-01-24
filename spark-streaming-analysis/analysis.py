@@ -15,7 +15,7 @@ if __name__ == "__main__":
         StructField("PowerOutput", StringType(), True),
         StructField("FuelLevel", StringType(), True),
         StructField("Voltage", StringType(), True),
-        StructField("FaultAlarms", StringType(), True)  # Updated to StringType for FaultAlarms
+        StructField("FaultAlarms", StringType(), True)  
     ])
 
     # Define the Kafka parameters
@@ -34,7 +34,6 @@ if __name__ == "__main__":
     value_df = streaming_df.select(from_json(col("value").cast("string"), schema).alias("value"))
     scada_df = value_df.selectExpr("value.*")
 
-    # Basic analysis - you can customize this based on your needs
     analysis_df = scada_df \
         .withColumn("PowerOutputNumeric", expr("CAST(REGEXP_REPLACE(PowerOutput, ' MW', '') AS DOUBLE)")) \
         .withColumn("FuelLevelNumeric", expr("CAST(REGEXP_REPLACE(FuelLevel, '%', '') AS DOUBLE)")) \

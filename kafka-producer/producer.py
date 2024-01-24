@@ -31,5 +31,5 @@ if __name__ == "__main__":
     loop = asyncio.get_event_loop()
     loop.run_until_complete(fetch_scada_data_and_produce())
 
-
+#python producer.py
 #kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic scada_data_topic
