@@ -71,7 +71,7 @@ project-root/
 
 ## Architecture
 
-![Project Architecture](<image_path>)
+![Project Architecture](architecture.png)
 
 *Caption: The architectural diagram illustrates the flow of data from the Fake SCADA Data Generator to Kafka and Spark Structured Streaming for real-time analysis.*
 
