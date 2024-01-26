@@ -48,7 +48,7 @@ project-root/
    cd SCADA-RealTime-Data-Pipeline
    ```
 
-2. **Run Zookeeper and kafka **
+2. **Run Zookeeper and kafka:**
    ```bash
    ~/kafka_2.13-3.5.0/bin/zookeeper-server-start.sh ~/kafka_2.13-3.5.0/config/zookeeper.properties
    ~/kafka_2.13-3.5.0/bin/kafka-server-start.sh ~/kafka_2.13-3.5.0/config/server.properties
